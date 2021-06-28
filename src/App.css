@@ -1,30 +1,9 @@
 .headerName{
   text-align: center;
   color: darkgoldenrod;
+  margin-bottom: 70px;
 }
 
-.images{
-  width: 400px;
-  height: 300px;
-  border: darkorange solid ;
-}
-
-.animalName{
-  color: darkgreen;
-  margin-left: 150px;
-}
-
-.description{
-  text-align: justify;
-  color: darkolivegreen;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-.animalData{
-  margin-left: 500px;
-  
-}
 .myName{
   color:darkgoldenrod;
   font-size: 20px;
@@ -32,4 +11,35 @@
   background-color:tan;
   text-align: center;
   
+}
+.cardStyle{
+  width: 300px;
+  display:inline-block;
+
+}
+.buttonStyle{
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+.likes,.vote,.cardTitle,.cardDesc,.cardKey,.horns{
+  text-align: center;
+}
+.likes{
+  color: green;
+  font-weight: 700;
+}
+.vote{
+  color:peru;
+  font-weight: 700;
+}
+.horns,.cardKey{
+  color:seagreen;
+  font-weight: 700;
+}
+.cardDesc,.cardTitle{
+  color:rgb(104, 19, 19);
+  font-weight: 800;
+}
+.cardBody{
+  display: inline-block;
 }
