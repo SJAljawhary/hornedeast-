@@ -1,24 +1,30 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import data from './assests/data.json';
+
 
 
 class Main extends React.Component {
-    render() {
-      return (
-  
-         <div>
+  render() {
+    return (
 
-{data.map((item,index)=>{
-                   return(
-                   <HornedBeast  title={item.title} description={item.description} url={item.imageURL} key={index}
-                   keyword={item.keyword} horns={item.horns} />
-                   )
-               })}
+      <div>
 
-</div>
-)
-}
+        {this.props.data.map((item, index) => {
+          return (
+            <HornedBeast
+              title={item.title}
+              description={item.description}
+              url={item.imageURL}
+              key={index}
+              keyword={item.keyword}
+              horns={item.horns}
+              popUpTheCard={this.props.popUpTheCard} />
+          )
+        })}
+
+      </div>
+    )
+  }
 }
 
 export default Main;
