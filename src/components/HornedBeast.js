@@ -21,11 +21,15 @@ increaseLikes = () => {
     })
 }
 
+popUpTheCard = () =>{
+    this.props.popUpTheCard(this.props.title)
+}
+
     render() {
       return (
   
         
-            <Card className='cardStyle'>
+            <Card onClick = {this.popUpTheCard} className='cardStyle'>
                   
                   <Card.Body className='cardBody'>
                       <Card.Title className='cardTitle'>{this.props.title}</Card.Title>
