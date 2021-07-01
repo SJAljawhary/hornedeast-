@@ -1,30 +1,28 @@
 import React from 'react';
-import Modal  from 'react-bootstrap/Modal';
+import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-class SelectedBeast extends React.Component{
-    render (){
-      return(
-
-        <Modal show = {this.props.shown} >
-
-        <Modal.Header>
-         {this.props.selectedCard.title}
+class SelectedBeasts extends React.Component{
+    render(){
+        return(
+            <Modal show={this.props.display} onHide={this.props.closing}>
+        <Modal.Header closeButton>
+          <Modal.Title>{this.props.displayContent.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <img style = {{width :'300px'}} src = {this.props.selectedCard.imageURL} alt = {this.props.selectedCard.imageURL} ></img>
-            <p> {this.props.selectedCard.description}</p>
+            <img variant="top" src={this.props.displayContent.imageURL} alt={this.props.displayContent.title} style = {{width :'200px'}} />
+              {this.props.displayContent.description}
         </Modal.Body>
-        <Modal.Footer>    
-          <Button variant="primary" onClick={this.props.closeCard}>
-          CLOSE</Button>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={this.props.closing}>
+            Close
+          </Button>
         </Modal.Footer>
-        </Modal>
-
-      )
+      </Modal>
+        )
     }
 }
-export default SelectedBeast;
+export default SelectedBeasts;
+

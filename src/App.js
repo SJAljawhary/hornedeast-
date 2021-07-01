@@ -1,50 +1,62 @@
 import React from 'react';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-
-import data from './components/data.json';
-import SelectedBeast from './components/SelectedBeast';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Main from './components/Main';
+import data from './components/data.json'
+import SelectedBeasts from './components/SelectedBeast';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 
 class App extends React.Component {
-  constructor(props){
+
+  constructor(props) {
     super(props);
     this.state = {
-      data: data,
-      show:false,
-      selectedCard : {}
+        data: data,
+        show: false,
+        dataModel: {}
     }
-  }
-  popUpTheCard = title => {
-    let select = data.find( card =>{
-      if (card.title === title){
-        return card ;
-      }
+}
+selectedCard = title => {
+    let found = data.find(element => {
+        if (element.title === title) {
+            return element;
+        }
     })
 
+
+    this.setState(
+        {
+            show: true,
+            dataModel: found
+        }
+    )
+}
+HandleClose = () => {
     this.setState({
-      show : true,
-      selectedCard : select
+        show: false,
     })
 
-  }
-  closeCard = () =>{
-    this.setState({show:false})
-  }
-  
-  render() {
-    return (
-      <div className='container'>
+}
+displayBeasts= (data)=> {
+        this.setState(
+            {data}
+        );
+    }
+  render(){
+    return(
+      <>
+      <Header />
+      <Main data={this.state.data} selectedCard={this.selectedCard} displayBeasts={this.displayBeasts} />
+      <Footer />
+      <SelectedBeasts display={this.state.show} displayContent={this.state.dataModel} closing={this.HandleClose} />
 
-     <Header />
-     <Main data = {this.state.data} popUpTheCard={this.popUpTheCard} />
-     <Footer />
-     <SelectedBeast shown = {this.state.show} closeCard = {this.closeCard} selectedCard = {this.state.selectedCard} />
-
-      </div>
+</>
     )
   }
 }
+
 export default App;
