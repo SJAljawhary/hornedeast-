@@ -1,6 +1,6 @@
 import React from 'react';
 import FilterHornd from './FilterHornd';
-import HornedBeasts from './HornedBeasts';
+import HornedBeasts from './HornedBeast';
 
 
 class Main extends React.Component {
@@ -18,7 +18,7 @@ class Main extends React.Component {
                             <HornedBeasts
                                 title={item.title}
                                 description={item.description}
-                                image={item.image_url}
+                                image={item.imageURL}
                                 kay={index}
                                 selectedCard={this.props.selectedCard}
                                 horns={this.props.data.horns}

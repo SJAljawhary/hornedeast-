@@ -15,9 +15,6 @@ class FilterHornd extends React.Component {
                 else {
                     data = horndData;
                 }
-
-                //     }
- 
  
             })
         }
@@ -35,9 +32,10 @@ class FilterHornd extends React.Component {
                         <Form.Label>Filter a beast by number of horns </Form.Label>
                         <Form.Control as="select" onChange={this.filter} >
                             <option>Open this select menu</option>
+                            <option value="0">All</option>
                             <option value="1">1 </option>
                             <option value="2">2</option>
-                            <option value="3"> 3</option>
+                            <option value="3">3</option>
                             <option value="100">100</option>
                         </Form.Control>
                     </Form.Group>

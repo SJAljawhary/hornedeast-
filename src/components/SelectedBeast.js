@@ -12,7 +12,7 @@ class SelectedBeasts extends React.Component{
           <Modal.Title>{this.props.displayContent.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <img variant="top" src={this.props.displayContent.image_url} alt={this.props.displayContent.title} style = {{width :'200px'}} />
+            <img variant="top" src={this.props.displayContent.imageURL} alt={this.props.displayContent.title} style = {{width :'200px'}} />
               {this.props.displayContent.description}
         </Modal.Body>
         <Modal.Footer>
