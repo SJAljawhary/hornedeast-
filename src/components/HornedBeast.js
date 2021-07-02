@@ -48,7 +48,7 @@ popUpTheCard = () =>{
                       </Card.Text>
                       <Button className='buttonStyle' variant="warning" onClick={this.increaseLikes} >VOTE</Button>{' '}
                       <Card.Text className='likes'>
-                      Likes Number : {this.state.numberOfLikes}
+                      💖 {this.state.numberOfLikes}
                       </Card.Text> 
                   </Card.Body>
               </Card>
