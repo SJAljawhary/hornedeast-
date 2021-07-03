@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
-
 import data from './components/data.json';
 import SelectedBeast from './components/SelectedBeast';
 import './App.css';
@@ -16,6 +15,7 @@ class App extends React.Component {
       show:false,
       selectedCard : {}
     }
+
   }
   popUpTheCard = title => {
     let select = data.find( card =>{
